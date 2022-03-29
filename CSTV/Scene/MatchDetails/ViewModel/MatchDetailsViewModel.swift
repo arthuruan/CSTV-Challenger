@@ -9,9 +9,9 @@ import Foundation
 
 
 class MatchDetailsViewModel {
-    var coordinator: MatchDetailsCoordinator?
+    var coordinator: MainCoordinator?
 
-    init(coordinator: MatchDetailsCoordinator) {
+    init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
     }
     

@@ -21,7 +21,7 @@ class AppCoordinator: Coordinator {
     
     func showMainRoute() {
         self.freeAllChildCoordinators()
-        let coordinator = MatchesCoordinator()
+        let coordinator = MainCoordinator()
         self.start(coordinator: coordinator)
         self.window.rootViewController = coordinator.rootViewController
         self.window.makeKeyAndVisible()

@@ -8,10 +8,10 @@
 import Foundation
 
 class MatchesViewModel {
-    var coordinator: MatchesCoordinator?
+    var coordinator: MainCoordinator?
     var matches: [Match]
     
-    init(coordinator: MatchesCoordinator) {
+    init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
         self.matches = .init([])
     }

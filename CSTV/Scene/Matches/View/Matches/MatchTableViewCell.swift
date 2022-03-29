@@ -2,7 +2,7 @@
 //  MatchTableViewCell.swift
 //  CSTV
 //
-//  Created by Arthur Ruan on 27/03/22.
+//  Created by Arthur Ruan on 29/03/22.
 //
 
 import UIKit
@@ -10,29 +10,20 @@ import UIKit
 class MatchTableViewCell: UITableViewCell {
     
     static let identifier = "MatchTableViewCell"
+    var viewModel: MatchesViewModel?
     
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .label
-        
-        return label
-    }()
+    @IBOutlet var nameLabel: UILabel!
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(nameLabel)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError()
+    override func awakeFromNib() {
+        super.awakeFromNib()
     }
 
-    override func prepareForReuse() {
-        super.prepareForReuse()
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        self.viewModel?.goToMatchDetails()
     }
     
     func configure(match: Match) {
         nameLabel.text = match.name
     }
-    
 }

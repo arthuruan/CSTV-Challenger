@@ -14,16 +14,14 @@
 		CB1830F027F0F02000286669 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830EF27F0F02000286669 /* MainCoordinator.swift */; };
 		CB1830F327F1199D00286669 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830F227F1199D00286669 /* Coordinator.swift */; };
 		CB1830F627F1208100286669 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830F527F1208100286669 /* AppCoordinator.swift */; };
-		CB1830F927F1224700286669 /* MatchesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830F827F1224700286669 /* MatchesCoordinator.swift */; };
-		CB1830FC27F1239700286669 /* MatchDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830FB27F1239700286669 /* MatchDetailsCoordinator.swift */; };
 		CB18310027F123B900286669 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830FF27F123B900286669 /* MatchDetailsViewController.swift */; };
 		CB18310327F126B000286669 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18310227F126B000286669 /* MatchesViewModel.swift */; };
 		CB18310527F127D400286669 /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18310427F127D400286669 /* ViewModelBindable.swift */; };
-		CB737D8327F13BFA00E14603 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB737D8127F13BFA00E14603 /* MatchTableViewCell.swift */; };
-		CB737D8427F13BFA00E14603 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB737D8227F13BFA00E14603 /* MatchTableViewCell.xib */; };
 		CB737D8627F140A000E14603 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB737D8527F140A000E14603 /* Match.swift */; };
 		CB737D8827F145E400E14603 /* MatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB737D8727F145E400E14603 /* MatchDetailsViewModel.swift */; };
 		CB737D8A27F1572900E14603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB737D8927F1572900E14603 /* Assets.xcassets */; };
+		CBEFD2C327F2AFFA00237180 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEFD2C127F2AFFA00237180 /* MatchTableViewCell.swift */; };
+		CBEFD2C427F2AFFA00237180 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEFD2C227F2AFFA00237180 /* MatchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,16 +34,14 @@
 		CB1830EF27F0F02000286669 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CB1830F227F1199D00286669 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CB1830F527F1208100286669 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		CB1830F827F1224700286669 /* MatchesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesCoordinator.swift; sourceTree = "<group>"; };
-		CB1830FB27F1239700286669 /* MatchDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsCoordinator.swift; sourceTree = "<group>"; };
 		CB1830FF27F123B900286669 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		CB18310227F126B000286669 /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
 		CB18310427F127D400286669 /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
-		CB737D8127F13BFA00E14603 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
-		CB737D8227F13BFA00E14603 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		CB737D8527F140A000E14603 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		CB737D8727F145E400E14603 /* MatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModel.swift; sourceTree = "<group>"; };
 		CB737D8927F1572900E14603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBEFD2C127F2AFFA00237180 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		CBEFD2C227F2AFFA00237180 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +151,6 @@
 			children = (
 				CB18310127F1269800286669 /* ViewModel */,
 				CB1830F727F1223200286669 /* View */,
-				CB1830F827F1224700286669 /* MatchesCoordinator.swift */,
 			);
 			path = Matches;
 			sourceTree = "<group>";
@@ -182,7 +177,6 @@
 			children = (
 				CB1830FE27F123A600286669 /* ViewModel */,
 				CB1830FD27F1239D00286669 /* View */,
-				CB1830FB27F1239700286669 /* MatchDetailsCoordinator.swift */,
 			);
 			path = MatchDetails;
 			sourceTree = "<group>";
@@ -214,8 +208,8 @@
 		CB18310627F1378C00286669 /* Matches */ = {
 			isa = PBXGroup;
 			children = (
-				CB737D8127F13BFA00E14603 /* MatchTableViewCell.swift */,
-				CB737D8227F13BFA00E14603 /* MatchTableViewCell.xib */,
+				CBEFD2C127F2AFFA00237180 /* MatchTableViewCell.swift */,
+				CBEFD2C227F2AFFA00237180 /* MatchTableViewCell.xib */,
 			);
 			path = Matches;
 			sourceTree = "<group>";
@@ -280,7 +274,7 @@
 			files = (
 				CB1830E027F0EEF700286669 /* LaunchScreen.storyboard in Resources */,
 				CB737D8A27F1572900E14603 /* Assets.xcassets in Resources */,
-				CB737D8427F13BFA00E14603 /* MatchTableViewCell.xib in Resources */,
+				CBEFD2C427F2AFFA00237180 /* MatchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,17 +287,15 @@
 			files = (
 				CB1830F627F1208100286669 /* AppCoordinator.swift in Sources */,
 				CB1830D827F0EEF400286669 /* MatchesViewController.swift in Sources */,
-				CB1830F927F1224700286669 /* MatchesCoordinator.swift in Sources */,
 				CB1830F327F1199D00286669 /* Coordinator.swift in Sources */,
 				CB18310527F127D400286669 /* ViewModelBindable.swift in Sources */,
-				CB737D8327F13BFA00E14603 /* MatchTableViewCell.swift in Sources */,
 				CB1830F027F0F02000286669 /* MainCoordinator.swift in Sources */,
 				CB18310027F123B900286669 /* MatchDetailsViewController.swift in Sources */,
+				CBEFD2C327F2AFFA00237180 /* MatchTableViewCell.swift in Sources */,
 				CB18310327F126B000286669 /* MatchesViewModel.swift in Sources */,
 				CB1830D427F0EEF400286669 /* AppDelegate.swift in Sources */,
 				CB737D8827F145E400E14603 /* MatchDetailsViewModel.swift in Sources */,
 				CB1830D627F0EEF400286669 /* SceneDelegate.swift in Sources */,
-				CB1830FC27F1239700286669 /* MatchDetailsCoordinator.swift in Sources */,
 				CB737D8627F140A000E14603 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

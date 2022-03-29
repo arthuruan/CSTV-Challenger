@@ -10,49 +10,47 @@ import UIKit
 class MatchesViewController: UIViewController, ViewModelBindable {
     
     var viewModel: MatchesViewModel?
-
+    
     private let tableView: UITableView = {
        let table = UITableView()
         table.register(MatchTableViewCell.self, forCellReuseIdentifier: MatchTableViewCell.identifier)
-        
+
         return table
-    }()
-    
-    private let sampleButton: UIButton = {
-        let button = UIButton()
-        button.setTitle("Match Details", for: .normal)
-        button.backgroundColor = .white
-        button.setTitleColor(.black, for: .normal)
-        return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 22/255, green: 22/255, blue: 33/255, alpha: 1)
+        view.addSubview(tableView)
         
-        view.addSubview(sampleButton)
-        sampleButton.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.frame = view.bounds
+        tableView.register(
+            UINib(nibName: MatchTableViewCell.identifier, bundle: nil),
+            forCellReuseIdentifier: MatchTableViewCell.identifier
+        )
+        tableView.backgroundColor = UIColor(red: 22/255, green: 22/255, blue: 33/255, alpha: 1)
+        
+        populateMatches()
     }
     
+    // TODO: Remove it
     private func populateMatches () {
+        let matches: [Match] = [
+            Match(name: "GG"),
+            Match(name: "Dio"),
+            Match(name: "Arthur Ruan")
+        ]
         
+        for match in matches {
+            viewModel?.matches.append(match)
+        }
     }
     
-    func bindViewModel() {  }
+    func bindViewModel() {}
     
     @objc private func didTapButton() {
         self.viewModel?.goToMatchDetails()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews();
-                
-        sampleButton.frame = CGRect(
-            x: 30,
-            y: view.frame.size.height - 150,
-            width: view.frame.size.width - 60,
-            height: 55
-        );
     }
 }
 
@@ -71,6 +69,10 @@ extension MatchesViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewModel?.goToMatchDetails()
     }
 }
 
