@@ -8,26 +8,41 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MatchesViewController" customModule="CSTV" customModuleProvider="target">
+            <connections>
+                <outlet property="screenTitle" destination="n44-t6-tNE" id="Uo4-PQ-UqA"/>
+                <outlet property="tableView" destination="bap-hZ-BKF" id="sVP-EF-sTt"/>
+                <outlet property="view" destination="iN0-l3-epB" id="TTQ-P6-bWh"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="77M-f0-iW3">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n44-t6-tNE">
+                    <rect key="frame" x="24" y="68" width="366" height="39"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bap-hZ-BKF">
+                    <rect key="frame" x="24" y="131" width="366" height="731"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" red="0.088562853629999994" green="0.086234934629999996" blue="0.12751987579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="77M-f0-iW3" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0fj-Pr-hbA"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="77M-f0-iW3" secondAttribute="trailing" id="6SD-Ai-hZ4"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="77M-f0-iW3" secondAttribute="bottom" id="78q-ym-P9I"/>
-                <constraint firstItem="77M-f0-iW3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="T69-B1-pBl"/>
+                <constraint firstItem="bap-hZ-BKF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="7UN-Hn-XQv"/>
+                <constraint firstItem="bap-hZ-BKF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8or-EA-bUL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bap-hZ-BKF" secondAttribute="trailing" constant="24" id="kHs-ta-NG6"/>
+                <constraint firstItem="bap-hZ-BKF" firstAttribute="top" secondItem="n44-t6-tNE" secondAttribute="bottom" constant="24" id="lw9-Lq-29b"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="n44-t6-tNE" secondAttribute="trailing" constant="24" id="nPl-PL-W17"/>
+                <constraint firstItem="n44-t6-tNE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="p1M-LC-fRM"/>
+                <constraint firstItem="n44-t6-tNE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="yY4-d3-iiF"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="116"/>
+            <point key="canvasLocation" x="131.8840579710145" y="86.383928571428569"/>
         </view>
     </objects>
     <resources>
