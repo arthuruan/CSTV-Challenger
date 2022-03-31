@@ -41,9 +41,9 @@ class MatchesViewController: UIViewController, ViewModelBindable {
     // TODO: Remove it
     private func populateMatches () {
         let matches: [Match] = [
-            Match(name: "GG"),
-            Match(name: "Dio"),
-            Match(name: "Arthur Ruan")
+            Match(name: "Hoje, 21:00"),
+            Match(name: "Hoje, 21:00"),
+            Match(name: "Hoje, 21:00")
         ]
         
         for match in matches {

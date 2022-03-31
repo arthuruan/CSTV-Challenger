@@ -27,16 +27,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bap-hZ-BKF">
-                    <rect key="frame" x="24" y="131" width="366" height="731"/>
+                    <rect key="frame" x="0.0" y="131" width="414" height="731"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.088562853629999994" green="0.086234934629999996" blue="0.12751987579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
-                <constraint firstItem="bap-hZ-BKF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="7UN-Hn-XQv"/>
+                <constraint firstItem="bap-hZ-BKF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7UN-Hn-XQv"/>
                 <constraint firstItem="bap-hZ-BKF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="8or-EA-bUL"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bap-hZ-BKF" secondAttribute="trailing" constant="24" id="kHs-ta-NG6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bap-hZ-BKF" secondAttribute="trailing" id="kHs-ta-NG6"/>
                 <constraint firstItem="bap-hZ-BKF" firstAttribute="top" secondItem="n44-t6-tNE" secondAttribute="bottom" constant="24" id="lw9-Lq-29b"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="n44-t6-tNE" secondAttribute="trailing" constant="24" id="nPl-PL-W17"/>
                 <constraint firstItem="n44-t6-tNE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="p1M-LC-fRM"/>
