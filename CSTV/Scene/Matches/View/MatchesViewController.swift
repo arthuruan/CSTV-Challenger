@@ -13,13 +13,6 @@ class MatchesViewController: UIViewController, ViewModelBindable {
     @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-//    private let tableView: UITableView = {
-//       let table = UITableView()
-//        table.register(MatchTableViewCell.self, forCellReuseIdentifier: MatchTableViewCell.identifier)
-//
-//        return table
-//    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
@@ -28,7 +21,6 @@ class MatchesViewController: UIViewController, ViewModelBindable {
         
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.frame = view.bounds
         tableView.register(
             UINib(nibName: MatchTableViewCell.identifier, bundle: nil),
             forCellReuseIdentifier: MatchTableViewCell.identifier

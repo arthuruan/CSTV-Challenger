@@ -21,6 +21,8 @@
 		CB737D8627F140A000E14603 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB737D8527F140A000E14603 /* Match.swift */; };
 		CB737D8827F145E400E14603 /* MatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB737D8727F145E400E14603 /* MatchDetailsViewModel.swift */; };
 		CB737D8A27F1572900E14603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB737D8927F1572900E14603 /* Assets.xcassets */; };
+		CBD0324C27F7FA6B00FCF1C3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD0324B27F7FA6B00FCF1C3 /* Utilities.swift */; };
+		CBD0324E27F8055100FCF1C3 /* MatchDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBD0324D27F8055100FCF1C3 /* MatchDetailsViewController.xib */; };
 		CBEFD2C327F2AFFA00237180 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEFD2C127F2AFFA00237180 /* MatchTableViewCell.swift */; };
 		CBEFD2C427F2AFFA00237180 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBEFD2C227F2AFFA00237180 /* MatchTableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		CB737D8527F140A000E14603 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		CB737D8727F145E400E14603 /* MatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModel.swift; sourceTree = "<group>"; };
 		CB737D8927F1572900E14603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CBD0324B27F7FA6B00FCF1C3 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CBD0324D27F8055100FCF1C3 /* MatchDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchDetailsViewController.xib; sourceTree = "<group>"; };
 		CBEFD2C127F2AFFA00237180 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		CBEFD2C227F2AFFA00237180 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +125,7 @@
 			children = (
 				CB1830F427F119C400286669 /* Coordinator */,
 				CB18310427F127D400286669 /* ViewModelBindable.swift */,
+				CBD0324B27F7FA6B00FCF1C3 /* Utilities.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				CB1830FF27F123B900286669 /* MatchDetailsViewController.swift */,
+				CBD0324D27F8055100FCF1C3 /* MatchDetailsViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 			files = (
 				CB1830E027F0EEF700286669 /* LaunchScreen.storyboard in Resources */,
 				CB737D8A27F1572900E14603 /* Assets.xcassets in Resources */,
+				CBD0324E27F8055100FCF1C3 /* MatchDetailsViewController.xib in Resources */,
 				CB222B6E27F3F6A100A38604 /* MatchesViewController.xib in Resources */,
 				CBEFD2C427F2AFFA00237180 /* MatchTableViewCell.xib in Resources */,
 			);
@@ -293,6 +300,7 @@
 				CB1830D827F0EEF400286669 /* MatchesViewController.swift in Sources */,
 				CB1830F327F1199D00286669 /* Coordinator.swift in Sources */,
 				CB18310527F127D400286669 /* ViewModelBindable.swift in Sources */,
+				CBD0324C27F7FA6B00FCF1C3 /* Utilities.swift in Sources */,
 				CB1830F027F0F02000286669 /* MainCoordinator.swift in Sources */,
 				CB18310027F123B900286669 /* MatchDetailsViewController.swift in Sources */,
 				CBEFD2C327F2AFFA00237180 /* MatchTableViewCell.swift in Sources */,
