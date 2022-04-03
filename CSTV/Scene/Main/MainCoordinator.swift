@@ -15,6 +15,19 @@ class MainCoordinator: NavigationCoordinator {
     
     init() {
         self.rootViewController = UINavigationController()
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        let iconLeftArrow = UIImage(named: "arrow-left")
+        self.rootViewController.navigationBar.backIndicatorImage = iconLeftArrow
+        self.rootViewController.navigationBar.backIndicatorTransitionMaskImage = iconLeftArrow
+        self.rootViewController.navigationBar.tintColor = UIColor.white
+        
+        self.rootViewController.navigationBar.prefersLargeTitles = true
+        self.rootViewController.navigationBar.barTintColor = UIColor(red: 22/255, green: 22/255, blue: 33/255, alpha: 1)
+        self.rootViewController.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        self.rootViewController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
     func start() {
@@ -23,7 +36,9 @@ class MainCoordinator: NavigationCoordinator {
         let matchesViewModel = MatchesViewModel(coordinator: self)
         matchesViewController.bind(to: matchesViewModel)
         
-        self.rootViewController.viewControllers = [matchesViewController]
+        matchesViewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+    
+        self.rootViewController.pushViewController(matchesViewController, animated: true)
     }
     
     func dismiss() {
@@ -36,7 +51,10 @@ class MainCoordinator: NavigationCoordinator {
         let matchDetailsViewController = MatchDetailsViewController()
         
         let matchDetailsViewModel = MatchDetailsViewModel(coordinator: self)
+        
         matchDetailsViewController.bind(to: matchDetailsViewModel)
+        
+        matchDetailsViewController.navigationItem.largeTitleDisplayMode = .never
         
         self.rootViewController.pushViewController(matchDetailsViewController, animated: true)
     }

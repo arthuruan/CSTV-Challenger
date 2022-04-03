@@ -10,14 +10,13 @@ import UIKit
 class MatchesViewController: UIViewController, ViewModelBindable {
     
     var viewModel: MatchesViewModel?
-    @IBOutlet weak var screenTitle: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
-        
-        screenTitle.text = "Partidas"
+
+        title = "Partidas"
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -33,6 +32,8 @@ class MatchesViewController: UIViewController, ViewModelBindable {
     // TODO: Remove it
     private func populateMatches () {
         let matches: [Match] = [
+            Match(name: "Hoje, 21:00"),
+            Match(name: "Hoje, 21:00"),
             Match(name: "Hoje, 21:00"),
             Match(name: "Hoje, 21:00"),
             Match(name: "Hoje, 21:00")

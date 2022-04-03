@@ -22,7 +22,7 @@ class MatchTableViewCell: UITableViewCell {
     @IBOutlet var teamAView: UIView!
     @IBOutlet var teamAImage: UIView! // TODO: change to UIImage
     @IBOutlet var teamALabel: UILabel!
-    
+    // MARK: VS label
     @IBOutlet var vsLabel: UILabel!
     // MARK: Team B
     @IBOutlet var teamBView: UIView!
@@ -57,7 +57,7 @@ class MatchTableViewCell: UITableViewCell {
         
         vsLabel.text = "vs"
         leagueLabel.text = "League + serie"
-        teamBLabel.text = "team 22222"
+        teamBLabel.text = "team 2"
         teamALabel.text = "team 1"
         
         // Adding border top
