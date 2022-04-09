@@ -50,6 +50,9 @@ class PlayerTableViewCell: UITableViewCell {
     }
     
     func configure(rowPlayers: RowPlayers) {
-        
+        playerTeamANicknameLabel.text = rowPlayers.playerTeamA.nickname
+        playerTeamANameLabel.text = rowPlayers.playerTeamA.name
+        playerTeamBNicknameLabel.text = rowPlayers.playerTeamB.nickname
+        playerTeamBNameLabel.text = rowPlayers.playerTeamB.name
     }
 }
