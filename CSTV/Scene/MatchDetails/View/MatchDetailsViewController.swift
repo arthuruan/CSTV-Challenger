@@ -33,6 +33,15 @@ class MatchDetailsViewController: UIViewController, ViewModelBindable {
         super.viewDidLoad()
         // TODO: remove this mock values
         title = "League + serie"
+        
+        playersTableView.dataSource = self
+        playersTableView.delegate = self
+        playersTableView.register(
+            UINib(nibName: PlayerTableViewCell.identifier, bundle: nil),
+            forCellReuseIdentifier: PlayerTableViewCell.identifier
+        )
+        playersTableView.backgroundColor = UIColor(red: 22/255, green: 22/255, blue: 33/255, alpha: 1)
+        
         teamALabel.text = "team 1"
         vsLabel.text = "vs"
         teamBLabel.text = "team 2"
@@ -40,6 +49,8 @@ class MatchDetailsViewController: UIViewController, ViewModelBindable {
         teamBImage.layer.cornerRadius = 30
         
         matchTimeLabel.text = "Hoje, 21:00"
+        
+        viewModel?.populatePlayers()
     }
     
     func bindViewModel() {}
@@ -51,6 +62,7 @@ extension MatchDetailsViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("aaa")
         guard let rowPlayers = viewModel?.players[indexPath.row] else { return UITableViewCell() }
         if let cell = tableView.dequeueReusableCell(
             withIdentifier: PlayerTableViewCell.identifier,

@@ -13,6 +13,6 @@ struct Player {
 }
 
 struct RowPlayers {
-    let playerOne: Player
-    let playerTwo: Player
+    let playerTeamA: Player
+    let playerTeamB: Player
 }

@@ -14,7 +14,6 @@ class MatchesViewController: UIViewController, ViewModelBindable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
 
         title = "Partidas"
         
