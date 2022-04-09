@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB12247E280123850087BC0C /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB12247C280123850087BC0C /* PlayerTableViewCell.swift */; };
+		CB12247F280123850087BC0C /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB12247D280123850087BC0C /* PlayerTableViewCell.xib */; };
+		CB122481280124380087BC0C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB122480280124380087BC0C /* Player.swift */; };
 		CB1830D427F0EEF400286669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830D327F0EEF400286669 /* AppDelegate.swift */; };
 		CB1830D627F0EEF400286669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830D527F0EEF400286669 /* SceneDelegate.swift */; };
 		CB1830D827F0EEF400286669 /* MatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1830D727F0EEF400286669 /* MatchesViewController.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB12247C280123850087BC0C /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		CB12247D280123850087BC0C /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		CB122480280124380087BC0C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CB1830D027F0EEF400286669 /* CSTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB1830D327F0EEF400286669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB1830D527F0EEF400286669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB12247B2801233F0087BC0C /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				CB12247C280123850087BC0C /* PlayerTableViewCell.swift */,
+				CB12247D280123850087BC0C /* PlayerTableViewCell.xib */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
 		CB1830C727F0EEF400286669 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				CB737D8527F140A000E14603 /* Match.swift */,
+				CB122480280124380087BC0C /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +208,7 @@
 		CB1830FD27F1239D00286669 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB12247B2801233F0087BC0C /* Players */,
 				CB1830FF27F123B900286669 /* MatchDetailsViewController.swift */,
 				CBD0324D27F8055100FCF1C3 /* MatchDetailsViewController.xib */,
 			);
@@ -283,6 +300,7 @@
 			files = (
 				CB1830E027F0EEF700286669 /* LaunchScreen.storyboard in Resources */,
 				CB737D8A27F1572900E14603 /* Assets.xcassets in Resources */,
+				CB12247F280123850087BC0C /* PlayerTableViewCell.xib in Resources */,
 				CBD0324E27F8055100FCF1C3 /* MatchDetailsViewController.xib in Resources */,
 				CB222B6E27F3F6A100A38604 /* MatchesViewController.xib in Resources */,
 				CBEFD2C427F2AFFA00237180 /* MatchTableViewCell.xib in Resources */,
@@ -296,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB12247E280123850087BC0C /* PlayerTableViewCell.swift in Sources */,
 				CB1830F627F1208100286669 /* AppCoordinator.swift in Sources */,
 				CB1830D827F0EEF400286669 /* MatchesViewController.swift in Sources */,
 				CB1830F327F1199D00286669 /* Coordinator.swift in Sources */,
@@ -308,6 +327,7 @@
 				CB1830D427F0EEF400286669 /* AppDelegate.swift in Sources */,
 				CB737D8827F145E400E14603 /* MatchDetailsViewModel.swift in Sources */,
 				CB1830D627F0EEF400286669 /* SceneDelegate.swift in Sources */,
+				CB122481280124380087BC0C /* Player.swift in Sources */,
 				CB737D8627F140A000E14603 /* Match.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

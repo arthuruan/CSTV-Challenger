@@ -54,7 +54,7 @@ class MatchTableViewCell: UITableViewCell {
         teamAImage.layer.cornerRadius = 30
         teamBImage.layer.cornerRadius = 30
         leagueLogo.layer.cornerRadius = 8
-        
+        // TODO: remove this mock values
         vsLabel.text = "vs"
         leagueLabel.text = "League + serie"
         teamBLabel.text = "team 2"

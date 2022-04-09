@@ -4,11 +4,14 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MatchDetailsViewController" customModule="CSTV" customModuleProvider="target">
             <connections>
+                <outlet property="matchTimeLabel" destination="Udc-gc-6Yn" id="jWa-dd-3BL"/>
+                <outlet property="playersTableView" destination="dtB-xk-mZw" id="Bdi-Vz-kms"/>
                 <outlet property="teamAImage" destination="xxT-Kd-Le2" id="Sho-nz-743"/>
                 <outlet property="teamALabel" destination="FLu-8I-4Vy" id="1io-8O-2Hj"/>
                 <outlet property="teamAView" destination="0bK-pu-c24" id="H9C-HM-VMN"/>
@@ -25,7 +28,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-Ms-7XL">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-Ms-7XL" userLabel="TeamsView">
                     <rect key="frame" x="0.0" y="98" width="414" height="118"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0bK-pu-c24" userLabel="Team A">
@@ -105,16 +108,38 @@
                         <constraint firstItem="Lgv-oG-5DG" firstAttribute="leading" secondItem="0bK-pu-c24" secondAttribute="trailing" constant="20" id="xiz-hM-AJk"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-gc-6Yn" userLabel="Match Time Label">
+                    <rect key="frame" x="24" y="224" width="366" height="14.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-xk-mZw" userLabel="Players Table View">
+                    <rect key="frame" x="0.0" y="258.5" width="414" height="603.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.088562853629999994" green="0.086234934629999996" blue="0.12751987579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dtB-xk-mZw" secondAttribute="bottom" id="2vH-YI-IR5"/>
+                <constraint firstItem="dtB-xk-mZw" firstAttribute="top" secondItem="Udc-gc-6Yn" secondAttribute="bottom" constant="20" id="8Vd-f9-Pla"/>
+                <constraint firstItem="Udc-gc-6Yn" firstAttribute="top" secondItem="hkO-Ms-7XL" secondAttribute="bottom" constant="8" symbolic="YES" id="ENG-57-f63"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Udc-gc-6Yn" secondAttribute="trailing" constant="24" id="Su7-Yd-8Yi"/>
                 <constraint firstItem="hkO-Ms-7XL" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="YX0-DK-GJD"/>
+                <constraint firstItem="Udc-gc-6Yn" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="bbL-8e-uWf"/>
                 <constraint firstItem="hkO-Ms-7XL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bbb-B6-1y4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dtB-xk-mZw" secondAttribute="trailing" id="gBQ-n6-hce"/>
+                <constraint firstItem="dtB-xk-mZw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ndh-1G-Zl0"/>
                 <constraint firstAttribute="trailing" secondItem="hkO-Ms-7XL" secondAttribute="trailing" id="r5X-pI-zaw"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
