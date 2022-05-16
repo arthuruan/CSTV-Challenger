@@ -24,23 +24,6 @@ class MatchesViewController: UIViewController, ViewModelBindable {
             forCellReuseIdentifier: MatchTableViewCell.identifier
         )
         tableView.backgroundColor = UIColor(red: 22/255, green: 22/255, blue: 33/255, alpha: 1)
-        
-        populateMatches()
-    }
-    
-    // TODO: Remove it
-    private func populateMatches () {
-        let matches: [Match] = [
-            Match(name: "Hoje, 21:00"),
-            Match(name: "Hoje, 21:00"),
-            Match(name: "Hoje, 21:00"),
-            Match(name: "Hoje, 21:00"),
-            Match(name: "Hoje, 21:00")
-        ]
-        
-        for match in matches {
-            viewModel?.matches.append(match)
-        }
     }
     
     func bindViewModel() {}

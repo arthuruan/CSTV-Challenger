@@ -14,6 +14,21 @@ class MatchesViewModel {
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
         self.matches = .init([])
+        self.getMatches()
+    }
+    
+    func getMatches() {
+        PandaScoreAPI.shared.getMatches{ result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let model):
+                    print(model)
+                    break
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
     }
     
     func goToMatchDetails() {
