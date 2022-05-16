@@ -14,14 +14,14 @@ class MatchesViewModel {
     init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
         self.matches = .init([])
-        self.getMatches()
     }
     
     func getMatches() {
-        PandaScoreAPI.shared.getMatches{ result in
+        PandaScoreAPI.shared.getMatches{ [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let model):
+                    self?.matches = model
                     print(model)
                     break
                 case .failure(let error):

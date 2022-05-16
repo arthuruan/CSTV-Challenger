@@ -24,6 +24,29 @@ class MatchesViewController: UIViewController, ViewModelBindable {
             forCellReuseIdentifier: MatchTableViewCell.identifier
         )
         tableView.backgroundColor = UIColor(red: 22/255, green: 22/255, blue: 33/255, alpha: 1)
+        getMatches()
+    }
+    // TODO: this should not be here
+    func getMatches() {
+        PandaScoreAPI.shared.getMatches{ result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let model):
+                    self.normalize(matches: model)
+                    print(model)
+                    break
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+    }
+    // TODO: remove it
+    func normalize (matches: [Match]) {
+        for match in matches {
+           viewModel?.matches.append(match)
+       }
+        tableView.reloadData()
     }
     
     func bindViewModel() {}

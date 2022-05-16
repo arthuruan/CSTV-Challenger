@@ -29,7 +29,7 @@ final class PandaScoreAPI {
     
     public func getMatches(completion: @escaping (Result<[Match], Error>) -> Void) {
         createRequest(
-            with: URL(string: Constants.baseAPIURL + "/matches?sort=&page=1&per_page=1"), // TODO: remove query hard coded
+            with: URL(string: Constants.baseAPIURL + "/matches?sort=&page=1&per_page=10"), // TODO: remove query hard coded
             type: .GET
         ) { baseRequest in
             let task = URLSession.shared.dataTask(with: baseRequest) { data, _, error in
@@ -63,7 +63,7 @@ final class PandaScoreAPI {
         var request = URLRequest(url: apiURL)
         request.setValue("Bearer \(Constants.token)", forHTTPHeaderField: "Authorization")
         request.httpMethod = type.rawValue
-        request.timeoutInterval = 30
+        request.timeoutInterval = 60
         completion(request)
     }
 }

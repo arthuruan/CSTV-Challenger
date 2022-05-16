@@ -70,6 +70,8 @@ class MatchTableViewCell: UITableViewCell {
     }
     
     func configure(match: Match) {
-        nameLabel.text = match.name
+        // TODO: this should not be here
+        nameLabel.text = match.status == Status.Running ? "live" : match.begin_at
+        leagueLabel.text = "\(match.league.name) - \(match.serie.name)"
     }
 }

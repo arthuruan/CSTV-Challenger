@@ -62,7 +62,6 @@ extension MatchDetailsViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("aaa")
         guard let rowPlayers = viewModel?.players[indexPath.row] else { return UITableViewCell() }
         if let cell = tableView.dequeueReusableCell(
             withIdentifier: PlayerTableViewCell.identifier,
