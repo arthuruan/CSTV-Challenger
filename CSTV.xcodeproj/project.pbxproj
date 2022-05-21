@@ -21,6 +21,11 @@
 		CB18310327F126B000286669 /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18310227F126B000286669 /* MatchesViewModel.swift */; };
 		CB18310527F127D400286669 /* ViewModelBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB18310427F127D400286669 /* ViewModelBindable.swift */; };
 		CB222B6E27F3F6A100A38604 /* MatchesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB222B6D27F3F6A100A38604 /* MatchesViewController.xib */; };
+		CB29B209283862E80011BDCE /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB29B208283862E80011BDCE /* Observable.swift */; };
+		CB29B20C2838639B0011BDCE /* RepositoryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB29B20B2838639B0011BDCE /* RepositoryState.swift */; };
+		CB29B20E283863C10011BDCE /* MatchesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB29B20D283863C10011BDCE /* MatchesRepository.swift */; };
+		CB29B211283865F70011BDCE /* ListMatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB29B210283865F70011BDCE /* ListMatchesService.swift */; };
+		CB29B213283867A20011BDCE /* RemoteListMatchesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB29B212283867A20011BDCE /* RemoteListMatchesService.swift */; };
 		CB59FA7D2831BCAA00DC4BDB /* PandaScoreAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB59FA7C2831BCAA00DC4BDB /* PandaScoreAPI.swift */; };
 		CB737D8627F140A000E14603 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB737D8527F140A000E14603 /* Match.swift */; };
 		CB737D8827F145E400E14603 /* MatchDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB737D8727F145E400E14603 /* MatchDetailsViewModel.swift */; };
@@ -48,6 +53,11 @@
 		CB18310227F126B000286669 /* MatchesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesViewModel.swift; sourceTree = "<group>"; };
 		CB18310427F127D400286669 /* ViewModelBindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBindable.swift; sourceTree = "<group>"; };
 		CB222B6D27F3F6A100A38604 /* MatchesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchesViewController.xib; sourceTree = "<group>"; };
+		CB29B208283862E80011BDCE /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		CB29B20B2838639B0011BDCE /* RepositoryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryState.swift; sourceTree = "<group>"; };
+		CB29B20D283863C10011BDCE /* MatchesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesRepository.swift; sourceTree = "<group>"; };
+		CB29B210283865F70011BDCE /* ListMatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMatchesService.swift; sourceTree = "<group>"; };
+		CB29B212283867A20011BDCE /* RemoteListMatchesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteListMatchesService.swift; sourceTree = "<group>"; };
 		CB59FA7C2831BCAA00DC4BDB /* PandaScoreAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PandaScoreAPI.swift; sourceTree = "<group>"; };
 		CB737D8527F140A000E14603 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		CB737D8727F145E400E14603 /* MatchDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -141,9 +151,10 @@
 		CB1830EA27F0EF8500286669 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				CB1830F427F119C400286669 /* Coordinator */,
+				CB1830F227F1199D00286669 /* Coordinator.swift */,
 				CB18310427F127D400286669 /* ViewModelBindable.swift */,
 				CBD0324B27F7FA6B00FCF1C3 /* Utilities.swift */,
+				CB29B208283862E80011BDCE /* Observable.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -159,6 +170,8 @@
 		CB1830EC27F0EF9900286669 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CB29B20F2838654D0011BDCE /* Service */,
+				CB29B207283862900011BDCE /* Repository */,
 				CB59FA7B2831BC9100DC4BDB /* API */,
 			);
 			path = Data;
@@ -179,14 +192,6 @@
 				CB1830F727F1223200286669 /* View */,
 			);
 			path = Matches;
-			sourceTree = "<group>";
-		};
-		CB1830F427F119C400286669 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-				CB1830F227F1199D00286669 /* Coordinator.swift */,
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		CB1830F727F1223200286669 /* View */ = {
@@ -241,6 +246,32 @@
 				CBEFD2C227F2AFFA00237180 /* MatchTableViewCell.xib */,
 			);
 			path = Matches;
+			sourceTree = "<group>";
+		};
+		CB29B207283862900011BDCE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CB29B20A2838632E0011BDCE /* Maches */,
+				CB29B20B2838639B0011BDCE /* RepositoryState.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CB29B20A2838632E0011BDCE /* Maches */ = {
+			isa = PBXGroup;
+			children = (
+				CB29B20D283863C10011BDCE /* MatchesRepository.swift */,
+			);
+			path = Maches;
+			sourceTree = "<group>";
+		};
+		CB29B20F2838654D0011BDCE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CB29B210283865F70011BDCE /* ListMatchesService.swift */,
+				CB29B212283867A20011BDCE /* RemoteListMatchesService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		CB59FA7B2831BC9100DC4BDB /* API */ = {
@@ -334,13 +365,18 @@
 				CB1830F027F0F02000286669 /* MainCoordinator.swift in Sources */,
 				CB18310027F123B900286669 /* MatchDetailsViewController.swift in Sources */,
 				CB59FA7D2831BCAA00DC4BDB /* PandaScoreAPI.swift in Sources */,
+				CB29B211283865F70011BDCE /* ListMatchesService.swift in Sources */,
 				CBEFD2C327F2AFFA00237180 /* MatchTableViewCell.swift in Sources */,
 				CB18310327F126B000286669 /* MatchesViewModel.swift in Sources */,
 				CB1830D427F0EEF400286669 /* AppDelegate.swift in Sources */,
+				CB29B20E283863C10011BDCE /* MatchesRepository.swift in Sources */,
+				CB29B209283862E80011BDCE /* Observable.swift in Sources */,
+				CB29B213283867A20011BDCE /* RemoteListMatchesService.swift in Sources */,
 				CB737D8827F145E400E14603 /* MatchDetailsViewModel.swift in Sources */,
 				CB1830D627F0EEF400286669 /* SceneDelegate.swift in Sources */,
 				CB122481280124380087BC0C /* Player.swift in Sources */,
 				CB737D8627F140A000E14603 /* Match.swift in Sources */,
+				CB29B20C2838639B0011BDCE /* RepositoryState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

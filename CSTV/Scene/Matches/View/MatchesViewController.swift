@@ -42,7 +42,7 @@ class MatchesViewController: UIViewController, ViewModelBindable {
         }
     }
     // TODO: remove it
-    func normalize (matches: [Match]) {
+    func normalize(matches: [Match]) {
         for match in matches {
            viewModel?.matches.append(match)
        }
